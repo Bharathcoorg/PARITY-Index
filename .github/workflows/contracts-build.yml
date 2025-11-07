@@ -25,6 +25,11 @@ jobs:
       - name: Install dependencies (OpenZeppelin)
         run: |
           forge install OpenZeppelin/openzeppelin-contracts@v4.9.3 --no-commit
+      - name: Verify dependencies
+        run: |
+          ls -la
+          ls -la lib || true
+          ls -la lib/openzeppelin-contracts || true
       - name: Show versions
         run: |
           forge --version

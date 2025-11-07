@@ -1,0 +1,28 @@
+name: Solidity Lint
+
+on:
+  push:
+    branches: [dev, main]
+    paths:
+      - 'contracts/**'
+      - 'solhint.json'
+  pull_request:
+    branches: [dev, main]
+    paths:
+      - 'contracts/**'
+      - 'solhint.json'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install solhint
+        run: npm install -g solhint
+      - name: Lint contracts
+        run: solhint 'contracts/**/*.sol' --formatter table || true

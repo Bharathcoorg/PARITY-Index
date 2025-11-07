@@ -1,0 +1,14 @@
+{
+  "extends": "solhint:recommended",
+  "plugins": [],
+  "rules": {
+    "max-line-length": ["warn", 140],
+    "func-order": "off",
+    "const-name-snakecase": "off",
+    "no-empty-blocks": "warn",
+    "compiler-version": ["error", "^0.8.0"],
+    "no-global-import": "error",
+    "avoid-low-level-calls": "warn",
+    "reentrancy": "error"
+  }
+}

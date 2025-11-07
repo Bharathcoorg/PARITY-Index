@@ -1,0 +1,13 @@
+[profile.default]
+src = 'contracts'
+test = 'contracts/test'
+out = 'out'
+libs = ['lib']
+optimizer = true
+optimizer_runs = 200
+evm_version = 'paris'
+
+[fmt]
+line_length = 120
+tab_width = 4
+bracket_spacing = true

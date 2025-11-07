@@ -24,7 +24,8 @@ jobs:
           version: stable
       - name: Install dependencies (OpenZeppelin)
         run: |
-          forge install OpenZeppelin/openzeppelin-contracts@v4.9.3 --no-commit
+          mkdir -p lib
+          git clone --depth 1 --branch v4.9.3 https://github.com/OpenZeppelin/openzeppelin-contracts.git lib/openzeppelin-contracts
       - name: Verify dependencies
         run: |
           ls -la

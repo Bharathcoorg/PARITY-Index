@@ -111,3 +111,21 @@ Supporting modules:
 - Collateral ratio enforcement ensures overcollateralization.
 - Slippage checks, daily limits, and fee caps protect users and protocol.
 - NAV bonuses and surplus transfers are bounded by configurable thresholds.
+
+## Tooling
+- Choose Foundry or Hardhat. Suggested defaults:
+  - Foundry: `foundry.toml` with `src = 'contracts'` and optimizer enabled.
+  - Tests: `contracts/test/` with unit and fuzz tests.
+
+## Build & Test (to be finalized)
+- Foundry example:
+  - `forge build`
+  - `forge test --gas-report`
+- Hardhat example:
+  - `npm i`
+  - `npx hardhat compile`
+  - `npx hardhat test`
+
+## Notes
+- Ensure SPDX and pragma consistency.
+- Document role assumptions and access controls.
